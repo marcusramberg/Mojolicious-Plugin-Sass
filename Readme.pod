@@ -24,7 +24,7 @@ L<Mojolicious::Plugin::Sass> is a simple plugin to use Sass
   $app->plugin('sass');
 
   # Mojolicious::Lite
-  plugin 'Sass';
+  plugin 'sass';
 
 Called when registering the plugin.
 
@@ -34,25 +34,23 @@ Called when registering the plugin.
 =head2 C<sass>
 
 Converts a Sass stylesheet to CSS on the fly.
-Supports template caching.
+
 
 =head2 C<scss>
 
 Converts an Scss stylesheet to CSS on the fly.
-Supports template caching.
 
 
 =head2 C<sassc>
 
 Converts a Sass stylesheet to a compressed CSS on the fly.
-Supports template caching.
 
 B<This handler is EXPERIMENTAL and may change without warnings.>
+
 
 =head2 C<scssc>
 
 Converts an Scss stylesheet to a compressed CSS on the fly.
-Supports template caching.
 
 B<This handler is EXPERIMENTAL and may change without warnings.>
 
@@ -62,7 +60,7 @@ B<This handler is EXPERIMENTAL and may change without warnings.>
 =head2 C<sass_stylesheet>
 
   # In a template
-  %= sass_stylesheet compress => '1', begin
+  %= sass_stylesheet compress => 1, begin
     p {
       color: #000;
       a {
@@ -76,7 +74,8 @@ B<This handler is EXPERIMENTAL and may change without warnings.>
 
 Renders Sass stylesheet code inline.
 
-Optional parameters include C<compress =E<gt> "1"|"0"> (the default is C<0>) and C<type =E<gt> "sass"|"scss"> (the default is C<scss>).
+Optional parameters include C<compress =E<gt> "1"|"0">
+(the default is C<0>) and C<type =E<gt> "sass"|"scss"> (the default is C<scss>).
 
 B<This helper is EXPERIMENTAL and may change without warnings.>
 
@@ -90,9 +89,9 @@ L<CSS::Compressor>.
 
 =head1 SEE ALSO
 
-
-The functionality of this plugin is similar to L<Mojolicious::Plugin::SassRenderer>,
-but supports template caching, DATA templates, helpers, and compression.
+The functionality of this plugin is similar to
+L<Mojolicious::Plugin::SassRenderer>, but supports template caching,
+C<DATA> templates, stylesheet helpers, and compression.
 
 
 =head1 BUGS
