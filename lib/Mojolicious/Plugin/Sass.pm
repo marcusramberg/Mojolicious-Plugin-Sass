@@ -2,6 +2,7 @@ package Mojolicious::Plugin::Sass;
 use Mojo::Base 'Mojolicious::Plugin';
 use Mojo::ByteStream 'b';
 use Text::Sass;
+# use CSS::Sass;
 use CSS::Compressor 'css_compress';
 
 our $VERSION = '0.02';
